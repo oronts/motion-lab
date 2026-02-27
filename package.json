@@ -1,7 +1,7 @@
 {
   "name": "@oronts/motion-lab",
   "version": "1.0.0",
-  "description": "40+ Production-Ready Scroll & SVG Animations with AI Prompts for Instant Reproduction",
+  "description": "Scroll and SVG animation showcase for React + Framer Motion. Browse effects, copy the prompt, paste into any LLM.",
   "author": "Oronts GmbH <office@oronts.com>",
   "license": "MIT",
   "homepage": "https://github.com/oronts/motion-lab#readme",
@@ -13,18 +13,14 @@
     "url": "https://github.com/oronts/motion-lab/issues"
   },
   "keywords": [
-    "react",
-    "animation",
     "framer-motion",
+    "react-animation",
     "scroll-animation",
     "svg-animation",
-    "motion",
     "parallax",
-    "scroll-effects",
-    "ui-components",
-    "nextjs",
-    "ai-prompts",
-    "oronts"
+    "horizontal-scroll",
+    "motion-design",
+    "nextjs"
   ],
   "main": "src/oronts-motion-lab.jsx",
   "files": [

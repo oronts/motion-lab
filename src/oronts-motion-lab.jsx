@@ -4,56 +4,12 @@ import React, { useState, useRef, useMemo, useEffect, useCallback, memo, createC
 import { motion, useScroll, useTransform, useSpring, AnimatePresence, useInView, useMotionValue, useReducedMotion } from 'framer-motion';
 
 /*
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║   ██████╗ ██████╗  ██████╗ ███╗   ██╗████████╗███████╗                       ║
-║  ██╔═══██╗██╔══██╗██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝                       ║
-║  ██║   ██║██████╔╝██║   ██║██╔██╗ ██║   ██║   ███████╗                       ║
-║  ██║   ██║██╔══██╗██║   ██║██║╚██╗██║   ██║   ╚════██║                       ║
-║  ╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║   ██║   ███████║                       ║
-║   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝                       ║
-║                                                                              ║
-║   MOTION LAB - Premium Animation Showcase                                    ║
-║   https://oronts.com                                                         ║
-║                                                                              ║
-║   40+ PRODUCTION-READY SCROLL & SVG ANIMATIONS                               ║
-║   Each effect includes AI prompts for instant reproduction                   ║
-║                                                                              ║
-║   SCROLL EFFECTS (15):                                                       ║
-║   ✅ Parallax Images          ✅ Hero Reveal (clip-path)                     ║
-║   ✅ Apple Zoom Section       ✅ Horizontal Scroll                           ║
-║   ✅ Slide Panels             ✅ Split Screen Scroll                         ║
-║   ✅ Zoom Gallery             ✅ Sticky Sections                             ║
-║   ✅ Scale on Scroll          ✅ Rotate on Scroll                            ║
-║   ✅ Fade Sections            ✅ Pin & Reveal                                ║
-║   ✅ Progress Indicator       ✅ Velocity Effects                            ║
-║   ✅ Scroll Snap                                                             ║
-║                                                                              ║
-║   SVG ANIMATIONS (10):                                                       ║
-║   ✅ Line Drawing             ✅ Morphing Shapes                             ║
-║   ✅ Animated Blob            ✅ Wave Animation                              ║
-║   ✅ Gradient Orbs            ✅ Geometric Patterns                          ║
-║   ✅ Animated Icons           ✅ Path Following                              ║
-║   ✅ Pulse Rings              ✅ Logo Reveal                                 ║
-║                                                                              ║
-║   TEXT EFFECTS (10):                                                         ║
-║   ✅ Typewriter               ✅ Text Scramble                               ║
-║   ✅ Glitch Text              ✅ Split Text                                  ║
-║   ✅ Outline to Fill          ✅ Gradient Text                               ║
-║   ✅ Cinematic Reveal         ✅ Character Reveal                            ║
-║   ✅ Text Wave                ✅ Rotating 3D Text                            ║
-║                                                                              ║
-║   COMPONENTS (10):                                                           ║
-║   ✅ Magnetic Buttons         ✅ Card Carousel                               ║
-║   ✅ Card Stack (FLIP)        ✅ Infinite Marquee                            ║
-║   ✅ Counter Animation        ✅ Staggered Grid                              ║
-║   ✅ 3D Tilt Cards            ✅ Hover Effects                               ║
-║   ✅ Modal Animations         ✅ Tab Transitions                             ║
-║                                                                              ║
-║   Built by Oronts GmbH - AI-First Technology Solutions                       ║
-║   GPU Accelerated • 120fps Ready • SSR Safe • Accessible                     ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+  Motion Lab — oronts.com
+
+  19 Framer Motion effects with copy-paste prompts.
+  Browse, grab the prompt, paste into your LLM, get working code.
+
+  React 18 + Framer Motion 11 + Next.js 14 (static export)
 */
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -194,8 +150,8 @@ const AIPromptBox = memo(({ prompt, title }) => {
       style={{ background: `${COLORS.accent}08`, border: `1px solid ${COLORS.accent}30`, borderRadius: '16px', padding: '1.25rem', margin: '2rem auto', maxWidth: '800px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: expanded ? '1rem' : 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <span style={{ fontSize: '1.25rem' }}>🤖</span>
-          <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', color: COLORS.accent, fontWeight: 600 }}>AI PROMPT: {title}</span>
+          <span style={{ fontSize: '1.25rem' }}>📋</span>
+          <span style={{ fontSize: '0.75rem', letterSpacing: '0.12em', color: COLORS.accent, fontWeight: 600 }}>PROMPT: {title}</span>
         </div>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
           <button onClick={() => setExpanded(!expanded)} style={{ background: 'rgba(255,255,255,0.1)', border: 'none', borderRadius: '8px', padding: '0.4rem 0.8rem', color: '#fff', fontSize: '0.75rem', cursor: 'pointer' }}>
@@ -326,7 +282,7 @@ const LuxuryHero = memo(({ onOpenDemo, onOpenDocs }) => {
         </motion.h1>
         
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.6 }} transition={{ ...TRANSITION.medium, delay: 0.4 }} style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', maxWidth: '600px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
-          40+ production-ready scroll & SVG animations with AI prompts for instant reproduction. Built by <strong style={{ color: COLORS.accent }}>Oronts GmbH</strong> for modern web experiences.
+          Scroll animations, SVG effects, and interactive components. Browse the effects, copy the prompt, paste into your LLM, get working code. Built by <strong style={{ color: COLORS.accent }}>Oronts</strong>.
         </motion.p>
         
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ ...TRANSITION.medium, delay: 0.5 }} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -336,7 +292,7 @@ const LuxuryHero = memo(({ onOpenDemo, onOpenDocs }) => {
         
         {/* Stats */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }} style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '3rem', flexWrap: 'wrap' }}>
-          {[{ num: '40+', label: 'Effects' }, { num: '120', label: 'FPS Ready' }, { num: '100%', label: 'SSR Safe' }].map((s, i) => (
+          {[{ num: '19', label: 'Effects' }, { num: '19', label: 'Prompts' }, { num: '0', label: 'Dependencies' }].map((s, i) => (
             <div key={i} style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '1.5rem', fontWeight: 700, color: COLORS.accent }}>{s.num}</div>
               <div style={{ fontSize: '0.7rem', opacity: 0.4, letterSpacing: '0.1em' }}>{s.label}</div>
@@ -384,23 +340,27 @@ const SVGLineDrawing = memo(() => {
         ))}
       </div>
       
-      <AIPromptBox title="SVG Line Drawing" prompt={`Create SVG line drawing animation with Framer Motion:
+      <AIPromptBox title="SVG Line Drawing" prompt={`Build an SVG line-drawing animation in React with Framer Motion.
 
-1. Use motion.path with pathLength animation
-2. Trigger on scroll with useInView hook
-3. Add staggered delays for multiple shapes
+I want several SVG shapes (star, hexagon, circle, curve, nested triangles) that draw themselves stroke-by-stroke when they scroll into view. Each shape should start with pathLength: 0 and animate to pathLength: 1, staggered so they don't all fire at once.
+
+Use useInView to detect when the container hits the viewport. Reset when it leaves so re-scrolling replays it.
+
+Here's the pattern for one shape:
 
 <motion.path
-  d="M50 5 L61 35 L95 35..."
+  d="M50 5 L61 35 L95 35 L68 57 L79 90 L50 70 L21 90 L32 57 L5 35 L39 35 Z"
   stroke="#7432ff"
   strokeWidth="2"
   strokeLinecap="round"
+  strokeLinejoin="round"
+  fill="none"
   initial={{ pathLength: 0 }}
   animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
-  transition={{ duration: 2, ease: "easeInOut" }}
+  transition={{ duration: 2, ease: "easeInOut", delay: 0 }}
 />
 
-Key: pathLength animates the stroke from 0% to 100% drawn.`} />
+Give each shape a different delay (0, 0.2, 0.4, ...) and a different stroke color.`} />
     </section>
   );
 });
@@ -431,22 +391,16 @@ const SVGMorphing = memo(() => {
         {shapes.map((_, i) => (<button key={i} onClick={() => setShapeIndex(i)} style={{ width: '10px', height: '10px', borderRadius: '50%', border: 'none', background: i === shapeIndex ? colors[i] : 'rgba(255,255,255,0.2)', cursor: 'pointer' }} />))}
       </div>
       
-      <AIPromptBox title="SVG Morphing" prompt={`Create morphing SVG shapes:
+      <AIPromptBox title="SVG Morphing" prompt={`Build an SVG shape morpher in React with Framer Motion.
 
-const shapes = [
-  "M50,10 L90,90 L10,90 Z",     // Triangle
-  "M10,10 L90,10 L90,90 L10,90 Z", // Square
-  "M50,10 A40,40 0 1,1 49.99,10 Z" // Circle
-];
+I want a single <motion.path> that cycles through different shapes: triangle, square, pentagon, circle. It should auto-advance every 2 seconds, and I also want clickable dot indicators to jump to any shape.
 
-<motion.path
-  d={shapes[index]}
-  fill={colors[index]}
-  animate={{ d: shapes[index], fill: colors[index] }}
-  transition={{ duration: 0.8, ease: "easeInOut" }}
-/>
+Animate both the d attribute and the fill color at the same time. Use Framer Motion's animate prop:
 
-Tip: Paths with similar point counts morph more smoothly.`} />
+animate={{ d: shapes[currentIndex], fill: colors[currentIndex] }}
+transition={{ duration: 0.8, ease: "easeInOut" }}
+
+Keep the SVG viewBox at "0 0 100 100". Paths with similar point counts morph more cleanly — for the circle, use an arc path like "M50,10 A40,40 0 1,1 49.99,10 Z" instead of actual circle elements.`} />
     </section>
   );
 });
@@ -480,32 +434,19 @@ const AnimatedBlob = memo(() => {
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: '3rem' }}>🎨</span></div>
       </div>
       
-      <AIPromptBox title="Animated Blob" prompt={`Create organic blob animation:
+      <AIPromptBox title="Animated Blob" prompt={`Build an animated blob component in React with Framer Motion and SVG.
 
-const blobPaths = [
-  "M45.5,-51.2C59.1,-41.8...",
-  "M41.9,-47.2C54.1,-38.7...",
-];
+I want an organic-looking blob that slowly morphs between two different blob shapes and also rotates continuously. Fill it with a gradient (purple to teal).
 
-<svg viewBox="-100 -100 200 200">
-  <defs>
-    <linearGradient id="blobGrad">
-      <stop offset="0%" stopColor="#7432ff" />
-      <stop offset="100%" stopColor="#2DD4BF" />
-    </linearGradient>
-  </defs>
-  <motion.path
-    d={blobPaths[index]}
-    fill="url(#blobGrad)"
-    animate={{ d: blobPaths[index], rotate: [0, 360] }}
-    transition={{
-      d: { duration: 2, ease: "easeInOut" },
-      rotate: { duration: 20, repeat: Infinity, ease: "linear" }
-    }}
-  />
-</svg>
+Use an SVG with viewBox="-100 -100 200 200". Define two blob paths (generated from blobmaker.app) and toggle between them on a 3-second interval. Animate both the d attribute and a 360-degree rotation:
 
-Tool: https://www.blobmaker.app/ for blob paths`} />
+animate={{ d: blobPaths[index], rotate: [0, 360] }}
+transition={{
+  d: { duration: 2 },
+  rotate: { duration: 20, repeat: Infinity, ease: "linear" }
+}}
+
+Use an SVG <linearGradient> for the fill. The blob should feel alive — slow rotation, smooth shape transitions.`} />
     </section>
   );
 });
@@ -532,32 +473,16 @@ const WaveAnimation = memo(() => {
         ))}
       </div>
       
-      <AIPromptBox title="Wave Animation" prompt={`Create layered wave animation:
+      <AIPromptBox title="Wave Animation" prompt={`Build a layered wave animation in React with Framer Motion.
 
-{[0, 1, 2].map(i => (
-  <motion.svg
-    viewBox="0 0 1440 320"
-    style={{ 
-      position: 'absolute', 
-      bottom: 0, 
-      width: '200%'  // Double for seamless loop
-    }}
-    animate={{ x: [0, '-50%'] }}
-    transition={{ 
-      duration: 10 + i * 5,  // Different speeds
-      repeat: Infinity, 
-      ease: 'linear' 
-    }}
-  >
-    <path
-      fill={colors[i]}
-      fillOpacity={0.3 - i * 0.08}
-      d="M0,160L48,170.7..."
-    />
-  </motion.svg>
-))}
+I want 3 overlapping SVG waves at the bottom of a section, each scrolling horizontally at different speeds to create a parallax depth effect. The trick for a seamless loop: make the SVG 200% wide and animate x from 0 to -50%, then repeat infinitely with ease: "linear".
 
-Tool: https://getwaves.io/ for wave paths`} />
+Each wave layer should have a different speed (10s, 15s, 20s), a different color, and decreasing opacity so the layers feel like depth.
+
+Generate wave paths with getwaves.io or use a single wavy path like:
+d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,165.3..."
+
+The container needs overflow: hidden and a fixed height (~220px). Position the SVGs absolute, pinned to the bottom.`} />
     </section>
   );
 });
@@ -588,30 +513,13 @@ const PulseRings = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Pulse Rings" prompt={`Create expanding pulse rings:
+      <AIPromptBox title="Pulse Rings" prompt={`Build a pulse ring animation in React with Framer Motion.
 
-{[0, 1, 2, 3].map(i => (
-  <motion.div
-    animate={{
-      scale: [0.5, 2],
-      opacity: [0.8, 0]
-    }}
-    transition={{
-      duration: 2,
-      repeat: Infinity,
-      delay: i * 0.5,  // Stagger rings
-      ease: 'easeOut'
-    }}
-    style={{
-      position: 'absolute',
-      inset: 0,
-      border: '2px solid #7432ff',
-      borderRadius: '50%'
-    }}
-  />
-))}
+I want 4 concentric circles that continuously expand outward and fade. Each ring starts at scale 0.5, animates to scale 2, and goes from opacity 0.8 to 0. Stagger the rings with delay: i * 0.5 so they ripple outward like sonar.
 
-Center element stays static while rings pulse outward.`} />
+In the center, place a static element (icon or button) that doesn't animate — it acts as the "source" of the pulse.
+
+All the rings are position: absolute, inset: 0 inside a relative container. Use border: "2px solid #7432ff" and borderRadius: "50%" — no fill, just the stroke expanding. The animation repeats infinitely with ease: "easeOut" for a natural deceleration.`} />
     </section>
   );
 });
@@ -653,41 +561,16 @@ const TypewriterEffect = memo(() => {
         </h3>
       </div>
       
-      <AIPromptBox title="Typewriter Effect" prompt={`Create typewriter text effect:
+      <AIPromptBox title="Typewriter Effect" prompt={`Build a typewriter text effect in React with Framer Motion.
 
-const [displayText, setDisplayText] = useState('');
-const phrases = ["Hello...", "World..."];
+I want text that types out character by character, pauses for 2 seconds, then deletes character by character, then types the next phrase from an array. It should loop through all phrases endlessly.
 
-useEffect(() => {
-  let charIndex = 0;
-  let isDeleting = false;
-  const phrase = phrases[index];
-  
-  const type = () => {
-    if (!isDeleting) {
-      setDisplayText(phrase.slice(0, charIndex + 1));
-      charIndex++;
-      if (charIndex === phrase.length) {
-        setTimeout(() => { isDeleting = true; type(); }, 2000);
-        return;
-      }
-    } else {
-      setDisplayText(phrase.slice(0, charIndex - 1));
-      charIndex--;
-      if (charIndex === 0) {
-        isDeleting = false;
-        setIndex(p => (p + 1) % phrases.length);
-        return;
-      }
-    }
-    setTimeout(type, isDeleting ? 50 : 100);
-  };
-  
-  setTimeout(type, 500);
-}, [index]);
+Typing speed: ~100ms per character. Deleting speed: ~50ms per character (faster feels more natural). After deleting, immediately start the next phrase.
 
-// Blinking cursor
-<motion.span animate={{ opacity: [1, 0] }} transition={{ duration: 0.5, repeat: Infinity }}>|</motion.span>`} />
+Add a blinking cursor at the end using Framer Motion:
+<motion.span animate={{ opacity: [1, 0] }} transition={{ duration: 0.5, repeat: Infinity }}>|</motion.span>
+
+Use useInView so it only starts typing when scrolled into view. Use setTimeout chains (not setInterval) since the timing varies between typing and deleting modes. Track displayText in state, charIndex and isDeleting in local variables inside the effect.`} />
     </section>
   );
 });
@@ -724,29 +607,13 @@ const TextScramble = memo(() => {
         {text}
       </motion.h3>
       
-      <AIPromptBox title="Text Scramble" prompt={`Create text scramble on hover:
+      <AIPromptBox title="Text Scramble" prompt={`Build a text scramble/decode effect in React that triggers on hover.
 
-const [text, setText] = useState('HOVER ME');
-const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*';
+When the user hovers, the text scrambles into random characters and then resolves character-by-character into a new word. When they leave, it scrambles back to the original.
 
-useEffect(() => {
-  const target = isHovered ? 'AMAZING!' : 'HOVER ME';
-  let iteration = 0;
-  
-  const interval = setInterval(() => {
-    setText(
-      target.split('').map((c, i) => 
-        i < iteration ? target[i] : chars[Math.floor(Math.random() * chars.length)]
-      ).join('')
-    );
-    iteration += 1/3;
-    if (iteration >= target.length) clearInterval(interval);
-  }, 30);
-  
-  return () => clearInterval(interval);
-}, [isHovered]);
+The approach: run a setInterval at 30ms. On each tick, map over the target string — characters before the current iteration index show the real letter, characters after show a random one from "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*". Increment iteration by 1/3 each tick so it takes a few frames per character to resolve.
 
-Use fontFamily: 'monospace' for consistent character widths.`} />
+Use fontFamily: "monospace" so the text doesn't jump around as characters change (monospace keeps every character the same width). Track isHovered state and derive the target string from it.`} />
     </section>
   );
 });
@@ -773,33 +640,16 @@ const GlitchText = memo(() => {
         )}
       </div>
       
-      <AIPromptBox title="Glitch Text" prompt={`Create glitch text effect:
+      <AIPromptBox title="Glitch Text" prompt={`Build a glitch text effect in React with Framer Motion.
 
-<div style={{ position: 'relative' }}>
-  <h3>GLITCH</h3>
-  
-  {/* Top half - cyan */}
-  <motion.h3
-    animate={{ x: [-2, 2, -1, 1, 0], opacity: [0, 1, 0.5, 1, 0] }}
-    transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 3 }}
-    style={{
-      position: 'absolute', top: 0, left: 0,
-      color: '#7432ff',
-      clipPath: 'inset(0 0 50% 0)'  // Top half
-    }}
-  >GLITCH</motion.h3>
-  
-  {/* Bottom half - teal */}
-  <motion.h3
-    animate={{ x: [2, -2, 1, -1, 0], opacity: [0, 1, 0.5, 1, 0] }}
-    transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 3, delay: 0.1 }}
-    style={{
-      position: 'absolute', top: 0, left: 0,
-      color: '#2DD4BF',
-      clipPath: 'inset(50% 0 0 0)'  // Bottom half
-    }}
-  >GLITCH</motion.h3>
-</div>`} />
+Stack three copies of the same text on top of each other using position: absolute. The base layer is white (static). The two glitch layers are different colors (purple and teal) and use clipPath to show only the top or bottom half:
+
+- Layer 1: clipPath: "inset(0 0 50% 0)" — shows top half, colored purple
+- Layer 2: clipPath: "inset(50% 0 0 0)" — shows bottom half, colored teal
+
+Animate both glitch layers with a quick x-axis jitter: x: [-2, 2, -1, 1, 0] over 0.2 seconds, then pause for 3 seconds (repeatDelay: 3) before glitching again. Offset the second layer by delay: 0.1 so they don't move in sync.
+
+The effect: the text sits still, then briefly splits into RGB-shifted halves, then snaps back. Looks like a digital signal error.`} />
     </section>
   );
 });
@@ -832,30 +682,13 @@ const ParallaxImage = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Parallax Image" prompt={`Create parallax scrolling:
+      <AIPromptBox title="Parallax Image" prompt={`Build a parallax scrolling section in React with Framer Motion.
 
-const ref = useRef(null);
-const { scrollYProgress } = useScroll({
-  target: ref,
-  offset: ["start end", "end start"]
-});
+I want an image (or background) that moves slower than the page scroll, creating a depth effect. As the section scrolls through the viewport, the inner content shifts vertically from -80px to +80px.
 
-const y = useSpring(
-  useTransform(scrollYProgress, [0, 1], [-80, 80]),
-  { stiffness: 60, damping: 20 }
-);
+Use useScroll with target: ref and offset: ["start end", "end start"] — this tracks from when the section enters the bottom of the viewport to when it leaves the top. Pipe scrollYProgress through useTransform to map [0, 1] → [-80, 80], then through useSpring for smooth interpolation.
 
-<div ref={ref} style={{ height: '50vh', overflow: 'hidden' }}>
-  <motion.div style={{
-    y,
-    position: 'absolute',
-    inset: '-15%'  // Extra size for movement room
-  }}>
-    <img src="..." style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </motion.div>
-</div>
-
-The -15% inset makes the image larger so movement doesn't show gaps.`} />
+The container needs overflow: hidden and a fixed height. Make the inner element larger than the container (inset: "-15%") so the parallax movement doesn't reveal empty space at the edges. Add a subtle scale animation too: scale from 1.1 → 1 → 1.1 across the scroll range for extra polish.`} />
     </section>
   );
 });
@@ -886,32 +719,17 @@ const HeroReveal = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Hero Reveal (Apple-style)" prompt={`Create Apple-style hero reveal:
+      <AIPromptBox title="Hero Reveal (Apple-style)" prompt={`Build an Apple-style hero reveal in React with Framer Motion.
 
-const { scrollYProgress } = useScroll({
-  target: ref,
-  offset: ["start start", "end start"]
-});
+I want a section that starts as a small rounded rectangle in the center of the screen and expands to fill the entire viewport as the user scrolls. Like the product reveals on apple.com.
 
-const clipPath = useTransform(
-  scrollYProgress,
-  [0, 0.4, 1],
-  [
-    "inset(35% 30% 35% 30% round 32px)",  // Small
-    "inset(5% 5% 5% 5% round 40px)",      // Medium
-    "inset(0% 0% 0% 0% round 0px)"        // Full
-  ]
-);
+The trick is animating CSS clipPath with Framer Motion's useTransform. Map scroll progress to three keyframes:
 
-<div ref={ref} style={{ height: '250vh' }}>
-  <div style={{ position: 'sticky', top: 0, height: '100vh' }}>
-    <motion.div style={{ clipPath, scale }}>
-      Content
-    </motion.div>
-  </div>
-</div>
+- 0%: "inset(35% 30% 35% 30% round 32px)" — small centered box
+- 40%: "inset(5% 5% 5% 5% round 40px)" — almost full with rounded corners
+- 100%: "inset(0% 0% 0% 0% round 0px)" — full bleed, no rounding
 
-The clipPath "inset()" with "round" creates animated rounded rectangles.`} />
+The outer container needs height: 250vh to give enough scroll room. Inside, use position: sticky with top: 0 and height: 100vh so the content stays pinned while the clip-path animates. Also animate scale from 0.6 → 1 for an additional zoom-in feel.`} />
     </section>
   );
 });
@@ -950,38 +768,15 @@ const HorizontalScroll = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Horizontal Scroll" prompt={`Create horizontal scroll on vertical scroll:
+      <AIPromptBox title="Horizontal Scroll" prompt={`Build a horizontal scroll section driven by vertical scrolling in React with Framer Motion.
 
-const ref = useRef(null);
-const { scrollYProgress } = useScroll({
-  target: ref,
-  offset: ["start start", "end end"]
-});
+I want a row of full-viewport panels that move horizontally as the user scrolls vertically. The section stays pinned to the screen while the panels slide left.
 
-const items = ['One', 'Two', 'Three', 'Four'];
+How it works: the outer container height = number of panels * 100vh. Inside, a sticky div (top: 0, height: 100vh, overflow: hidden) pins the content. A flex row of panels (each minWidth: 100vw, flexShrink: 0) is translated on the x-axis based on scroll progress.
 
-const x = useSpring(
-  useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["5%", \`-\${(items.length - 1) * 100 + 5}%\`]
-  ),
-  { stiffness: 60, damping: 20 }
-);
+Use useScroll with offset: ["start start", "end end"] to track the full scroll range. Map scrollYProgress [0, 1] to x position ["5%", "-305%"] (for 4 panels: -(panels - 1) * 100 + 5). Wrap it in useSpring({ stiffness: 60, damping: 20 }) so the movement feels smooth instead of jerky.
 
-<div ref={ref} style={{ height: \`\${items.length * 100}vh\` }}>
-  <div style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}>
-    <motion.div style={{ x, display: 'flex' }}>
-      {items.map((item, i) => (
-        <div style={{ minWidth: '100vw', flexShrink: 0 }}>
-          {item}
-        </div>
-      ))}
-    </motion.div>
-  </div>
-</div>
-
-Height = items.length * 100vh gives scroll room for all panels.`} />
+Give each panel a different background gradient so the transitions are visually clear.`} />
     </section>
   );
 });
@@ -1031,39 +826,15 @@ const SlidePanels = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Slide Panels" prompt={`Create directional slide panels:
+      <AIPromptBox title="Slide Panels" prompt={`Build directional slide panels in React with Framer Motion.
 
-const panels = [
-  { color: '#7432ff', text: '1', from: 'left' },
-  { color: '#f5576c', text: '2', from: 'right' },
-  { color: '#2DD4BF', text: '3', from: 'top' },
-  { color: '#4facfe', text: '4', from: 'bottom' },
-];
+I want 4 full-screen panels that slide in from different edges (left, right, top, bottom) as the user scrolls. Each panel covers the previous one, creating a layered stacking effect.
 
-{panels.map((panel, i) => {
-  const start = i / panels.length;
-  const end = start + 0.2;
-  
-  const fromX = panel.from === 'left' ? '-100%' 
-    : panel.from === 'right' ? '100%' : '0%';
-  const fromY = panel.from === 'top' ? '-100%' 
-    : panel.from === 'bottom' ? '100%' : '0%';
-  
-  return (
-    <motion.div
-      style={{
-        x: useTransform(scrollYProgress, [start, end], [fromX, '0%']),
-        y: useTransform(scrollYProgress, [start, end], [fromY, '0%']),
-        position: 'absolute', inset: 0,
-        zIndex: i
-      }}
-    >
-      {panel.text}
-    </motion.div>
-  );
-})}
+The layout: a tall container (400vh) with a sticky viewport inside. Each panel is position: absolute, inset: 0 and stacked with increasing z-index. Use useScroll to track progress, then useTransform to map each panel's entrance to a different scroll range.
 
-Each panel slides from its direction as you scroll.`} />
+For panel i out of N total: start = i / N, end = start + 0.2. Map [start, end] to the panel's entry axis — a "left" panel goes from x: "-100%" to x: "0%", a "bottom" panel goes from y: "100%" to y: "0%", etc.
+
+Important: each panel needs its own useTransform call, so extract panels into a child component to avoid calling hooks inside .map(). Give each panel a bold background color and a large centered number.`} />
     </section>
   );
 });
@@ -1090,31 +861,15 @@ const CinematicText = memo(({ text, highlight = '' }) => {
         ))}
       </h2>
       
-      <AIPromptBox title="Cinematic Text" prompt={`Create word-by-word cinematic reveal:
+      <AIPromptBox title="Cinematic Text" prompt={`Build a cinematic word-by-word text reveal in React with Framer Motion.
 
-const words = text.split(' ');
-const isInView = useInView(ref, { amount: 0.6 });
+Split a sentence into individual words, wrap each in a <motion.span>, and animate them in sequence when the section scrolls into view. Each word starts off-screen (y: 80, opacity: 0) and rotated backward (rotateX: -60), then flips up into position.
 
-{words.map((word, i) => (
-  <motion.span
-    initial={{ opacity: 0, y: 80, rotateX: -60 }}
-    animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
-    transition={{
-      duration: 0.8,
-      delay: i * 0.04,  // Stagger
-      ease: [0.16, 1, 0.3, 1]
-    }}
-    style={{
-      display: 'inline-block',
-      marginRight: '0.25em',
-      transformStyle: 'preserve-3d'
-    }}
-  >
-    {word}
-  </motion.span>
-))}
+Stagger the delays: delay: i * 0.04 per word. Use a punchy ease curve like [0.16, 1, 0.3, 1] and duration: 0.8 so it feels fast but smooth.
 
-The rotateX creates a 3D flip-up effect for each word.`} />
+Each word needs display: "inline-block" (otherwise transform won't work on inline elements) and transformStyle: "preserve-3d" for the rotateX to render in 3D. Add marginRight: "0.25em" for word spacing.
+
+Use useInView with amount: 0.6 so the animation fires when the text is mostly visible. Optionally highlight a keyword in a different color.`} />
     </section>
   );
 });
@@ -1160,36 +915,15 @@ const CardCarousel = memo(() => {
         {cards.map((_, i) => (<button key={i} onClick={() => setCurrent(i)} style={{ width: current === i ? '20px' : '8px', height: '8px', borderRadius: '4px', border: 'none', background: current === i ? COLORS.accent : 'rgba(255,255,255,0.2)', cursor: 'pointer', transition: 'all 0.3s', padding: 0 }} />))}
       </div>
       
-      <AIPromptBox title="Card Carousel" prompt={`Create draggable card carousel:
+      <AIPromptBox title="Card Carousel" prompt={`Build a draggable card carousel in React with Framer Motion.
 
-const [current, setCurrent] = useState(0);
+I want a horizontal row of cards that the user can swipe/drag to navigate. When you drag left past a threshold (-50px), it snaps to the next card. Drag right past +50px, it goes back. The current card is full size, adjacent cards are scaled down (0.85) and dimmed (opacity 0.4).
 
-const handleDragEnd = (_, info) => {
-  if (info.offset.x < -50 && current < cards.length - 1) 
-    setCurrent(p => p + 1);
-  else if (info.offset.x > 50 && current > 0) 
-    setCurrent(p => p - 1);
-};
+Use Framer Motion's drag="x" on the container. Set dragConstraints={{ left: 0, right: 0 }} so it always snaps back, and dragElastic={0.1} for a subtle rubber-band feel. In onDragEnd, check info.offset.x to decide whether to advance or go back.
 
-<motion.div
-  drag="x"
-  dragConstraints={{ left: 0, right: 0 }}
-  dragElastic={0.1}
-  onDragEnd={handleDragEnd}
-  animate={{ x: -current * cardWidth }}
-  transition={{ type: 'spring', stiffness: 400, damping: 35 }}
->
-  {cards.map((card, i) => (
-    <motion.div
-      animate={{
-        scale: current === i ? 1 : 0.85,
-        opacity: current === i ? 1 : 0.4
-      }}
-    >
-      {card.content}
-    </motion.div>
-  ))}
-</motion.div>`} />
+Animate the container's x position to -current * cardWidth with a spring transition (stiffness: 400, damping: 35). Center the carousel with padding: "0 calc(50vw - halfCardWidth)".
+
+Add dot indicators at the bottom — the active dot is wider (20px vs 8px) to show which card is selected.`} />
     </section>
   );
 });
@@ -1227,35 +961,15 @@ const CardStack = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Card Stack (FLIP)" prompt={`Create shuffling card stack:
+      <AIPromptBox title="Card Stack (FLIP)" prompt={`Build a card stack with shuffle animation in React with Framer Motion.
 
-const [cards, setCards] = useState([...]);
+I want a stack of cards piled on top of each other with slight offsets (x: i * 6, y: i * -6). Clicking the stack takes the top card and sends it to the back of the pile. The cards animate into their new positions smoothly.
 
-const handleClick = () => {
-  setCards(p => {
-    const n = [...p];
-    const first = n.shift();
-    if (first) n.push(first);
-    return n;
-  });
-};
+The key is Framer Motion's layout prop — add it to each card and it handles the FLIP animation (First, Last, Invert, Play) automatically when the array order changes. Use key={card.id} (not the array index) so React and Framer Motion can track each card's identity across reorders.
 
-{cards.map((card, i) => (
-  <motion.div
-    key={card.id}
-    layout  // ← Enables FLIP animation
-    animate={{
-      x: i * 6, y: i * -6,
-      zIndex: cards.length - i,
-      rotate: i === 0 ? 0 : (i % 2 === 0 ? 2 : -2)
-    }}
-    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-  >
-    {card.content}
-  </motion.div>
-))}
+On click, shift the first element off the array and push it to the end. The cards that were behind move forward, and the previously-top card slides to the back.
 
-The "layout" prop handles position animation automatically.`} />
+Use a bouncy spring (stiffness: 300, damping: 20, mass: 0.6) and add a subtle alternating rotation (2 or -2 degrees) on non-top cards for a casual, tossed look.`} />
     </section>
   );
 });
@@ -1290,28 +1004,17 @@ const InfiniteMarquee = memo(() => {
         </motion.div>
       </div>
       
-      <AIPromptBox title="Infinite Marquee" prompt={`Create seamless infinite marquee:
+      <AIPromptBox title="Infinite Marquee" prompt={`Build an infinite scrolling marquee in React with Framer Motion.
 
-const items = [...];
-const doubled = [...items, ...items];
+I want a horizontal ticker that scrolls continuously, like a news crawl or a brand logo bar. It should loop seamlessly with no visible seam or jump.
 
-<div style={{ overflow: 'hidden', position: 'relative' }}>
-  {/* Fade edges */}
-  <div style={{ position: 'absolute', left: 0, width: '80px',
-    background: 'linear-gradient(to right, #1d233a, transparent)', zIndex: 10 }} />
-  <div style={{ position: 'absolute', right: 0, width: '80px',
-    background: 'linear-gradient(to left, #1d233a, transparent)', zIndex: 10 }} />
-  
-  <motion.div
-    animate={{ x: [0, '-50%'] }}
-    transition={{ x: { duration: 20, repeat: Infinity, ease: 'linear' } }}
-    style={{ display: 'flex', gap: '1.5rem', width: 'fit-content' }}
-  >
-    {doubled.map((item, i) => <div key={i}>{item}</div>)}
-  </motion.div>
-</div>
+The trick: duplicate the item array (const doubled = [...items, ...items]) and animate x from 0 to "-50%". Since the content is doubled, reaching -50% puts you exactly where you started — the loop is invisible.
 
-Doubling items and animating to -50% creates perfect loop.`} />
+Use ease: "linear" and repeat: Infinity so it never accelerates or pauses. Set width: "fit-content" on the flex container so it sizes to its content.
+
+Add fade-out edges on both sides using absolutely positioned gradient overlays (linear-gradient from your background color to transparent, ~80px wide, z-index above the content). This hides the hard edges and looks polished.
+
+The container needs overflow: hidden. Duration around 20s feels relaxed — adjust to taste.`} />
     </section>
   );
 });
@@ -1358,32 +1061,15 @@ const CountersSection = memo(() => (
       ))}
     </div>
     
-    <AIPromptBox title="Counter Animation" prompt={`Create animated counter:
+    <AIPromptBox title="Counter Animation" prompt={`Build an animated number counter in React that counts up when scrolled into view.
 
-const [count, setCount] = useState(0);
-const isInView = useInView(ref, { amount: 0.8 });
+When the element enters the viewport, count from 0 to the target number over 2 seconds using requestAnimationFrame. Apply an ease-out cubic curve (1 - Math.pow(1 - progress, 3)) so it starts fast and decelerates — this feels more natural than linear counting.
 
-useEffect(() => {
-  if (!isInView) { setCount(0); return; }
-  
-  let startTime;
-  const animate = (timestamp) => {
-    if (!startTime) startTime = timestamp;
-    const progress = Math.min((timestamp - startTime) / 2000, 1);
-    
-    // Ease-out cubic
-    const eased = 1 - Math.pow(1 - progress, 3);
-    setCount(Math.floor(eased * targetValue));
-    
-    if (progress < 1) requestAnimationFrame(animate);
-  };
-  
-  requestAnimationFrame(animate);
-}, [isInView, targetValue]);
+Use useInView with amount: 0.8 so it triggers when mostly visible. When it scrolls out of view, reset to 0 so re-scrolling replays the animation.
 
-<span style={{ fontVariantNumeric: 'tabular-nums' }}>{count}</span>
+Use fontVariantNumeric: "tabular-nums" on the display element — this makes all digits the same width so the number doesn't jump around as it counts (the "1" won't be narrower than "0").
 
-Use tabular-nums for consistent digit widths.`} />
+Accept props for the target number and an optional suffix like "+" or "%". Render as a span so it can sit inline with labels.`} />
   </section>
 ));
 
@@ -1412,26 +1098,15 @@ const StaggeredGrid = memo(() => {
         ))}
       </div>
       
-      <AIPromptBox title="Staggered Grid" prompt={`Create staggered grid animation:
+      <AIPromptBox title="Staggered Grid" prompt={`Build a staggered grid entrance animation in React with Framer Motion.
 
-const isInView = useInView(ref, { amount: 0.1 });
+I want a grid of items that pop in one after another when the grid scrolls into view — a cascade/wave effect. Each item starts scaled down (0.8), shifted down (y: 40), and invisible (opacity: 0), then springs into place.
 
-{items.map((item, i) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8, y: 40 }}
-    animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
-    transition={{
-      duration: 0.5,
-      delay: i * 0.05,  // Stagger delay
-      ease: [0.16, 1, 0.3, 1]
-    }}
-    whileHover={{ scale: 1.05, zIndex: 10 }}
-  >
-    {item.content}
-  </motion.div>
-))}
+The stagger comes from delay: i * 0.05 on each item. With a 3x3 grid that's 9 items, the last one starts 0.4s after the first — fast enough to feel connected, slow enough to read as a wave.
 
-Each item appears with incremental delay for wave effect.`} />
+Use useInView with a low threshold (amount: 0.1) so it fires as soon as the grid peeks into view. Add whileHover={{ scale: 1.05, zIndex: 10 }} for interactivity.
+
+Use CSS Grid with repeat(3, 1fr) and aspect-ratio: 1 for square cells. The ease curve [0.16, 1, 0.3, 1] gives a snappy entrance with a soft landing.`} />
     </section>
   );
 });
@@ -1459,30 +1134,13 @@ const RotatingText = memo(() => {
         </div>
       </div>
       
-      <AIPromptBox title="Rotating 3D Text" prompt={`Create per-character 3D rotation:
+      <AIPromptBox title="Rotating 3D Text" prompt={`Build per-character 3D rotating text in React with Framer Motion.
 
-<div style={{ perspective: '400px' }}>
-  {text.split('').map((char, i) => (
-    <motion.span
-      animate={{ rotateX: [0, 360] }}
-      transition={{
-        duration: 1.5,
-        repeat: Infinity,
-        ease: 'linear',
-        delay: i * 0.08  // Wave effect
-      }}
-      style={{
-        display: 'inline-block',
-        transformStyle: 'preserve-3d',
-        transformOrigin: 'center center -20px'
-      }}
-    >
-      {char}
-    </motion.span>
-  ))}
-</div>
+Split a word into individual characters, wrap each in a <motion.span>, and rotate them on the X axis continuously (rotateX: [0, 360]). Stagger the start with delay: i * 0.08 so the characters ripple like a wave — each one is slightly behind the previous.
 
-The perspective on parent enables 3D effect. transformOrigin offset creates rotation axis.`} />
+The parent container needs perspective: "400px" to enable 3D rendering. Each character needs transformStyle: "preserve-3d" and, critically, transformOrigin: "center center -20px" — the negative Z offset moves the rotation axis behind the character so it rotates around a barrel shape instead of flipping flat.
+
+Use ease: "linear" for continuous smooth rotation. Duration around 1.5s per full rotation. display: "inline-block" on each span so rotateX applies (transforms don't work on inline elements).`} />
     </section>
   );
 });
@@ -1580,10 +1238,10 @@ const DocsPanel = memo(({ onClose }) => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(20px)', zIndex: 2000, overflow: 'auto', padding: '2rem' }}>
       <motion.div initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} onClick={e => e.stopPropagation()} style={{ maxWidth: '800px', margin: '0 auto', background: COLORS.bgCard, borderRadius: '24px', padding: '2rem', border: `1px solid ${COLORS.border}` }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: COLORS.accent }}>🤖 All AI Prompts</h2>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: COLORS.accent }}>All Effects</h2>
           <MagneticButton onClick={onClose} variant="secondary" size="sm">Close</MagneticButton>
         </div>
-        <p style={{ opacity: 0.5, marginBottom: '1.5rem', fontSize: '0.9rem' }}>Each section has a detailed AI prompt. Scroll through the page and click {'"'}📋 Copy{'"'} on any effect!</p>
+        <p style={{ opacity: 0.5, marginBottom: '1.5rem', fontSize: '0.9rem' }}>Scroll to any effect and click Copy to grab its prompt. Paste into your LLM to get working code.</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '0.75rem' }}>
           {effects.map((name, i) => (
             <div key={i} style={{ padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '10px', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.85rem' }}>
@@ -1621,10 +1279,10 @@ const Footer = memo(() => (
         Built with <span style={{ color: COLORS.accent }}>Framer Motion</span>
       </p>
       <p style={{ opacity: 0.4, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
-        40+ Effects • AI Prompts • SSR Safe • GPU Accelerated
+        19 Effects • Copy-Paste Prompts • React + Framer Motion
       </p>
       <p style={{ opacity: 0.3, fontSize: '0.75rem', maxWidth: '500px', margin: '0 auto' }}>
-        Copy any prompt and paste into Claude, GPT, or your favorite AI assistant to recreate these effects instantly.
+        Find an effect you like, copy the prompt, paste it into your LLM, and get working code for your project.
       </p>
       <div style={{ marginTop: '2rem' }}>
         <a href="https://oronts.com" style={{ color: COLORS.accent, fontSize: '0.85rem', textDecoration: 'none', fontWeight: 500 }}>

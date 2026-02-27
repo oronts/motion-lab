@@ -2,53 +2,25 @@
   <img src="https://raw.githubusercontent.com/oronts/motion-lab/main/assets/logo.svg" alt="Oronts Motion Lab" width="120" />
 </p>
 
-<h1 align="center">Oronts Motion Lab</h1>
+<h1 align="center">Motion Lab</h1>
 
 <p align="center">
-  <strong>40+ Production-Ready Scroll & SVG Animations with AI Prompts</strong>
+  Scroll animations, SVG effects, and interactive components you can copy straight into your project — or grab the prompt and let an LLM build it for you.
 </p>
 
 <p align="center">
-  <a href="https://oronts.com">
-    <img src="https://img.shields.io/badge/Built%20by-Oronts%20-7432ff?style=for-the-badge" alt="Built by Oronts" />
-  </a>
-  <a href="https://react.dev">
-    <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 18+" />
-  </a>
-  <a href="https://www.framer.com/motion/">
-    <img src="https://img.shields.io/badge/Framer%20Motion-11+-FF0055?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
-  </a>
-  <a href="https://nextjs.org">
-    <img src="https://img.shields.io/badge/Next.js-Ready-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js Ready" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-demo">Demo</a> •
-  <a href="#-installation">Installation</a> •
-  <a href="#-effects-catalog">Effects</a> •
-  <a href="#-ai-prompts">AI Prompts</a> •
-  <a href="#-documentation">Docs</a>
+  <a href="https://motion-lab.oronts.com"><strong>Live Demo</strong></a> · <a href="#get-started">Get Started</a> · <a href="#effects">Effects</a> · <a href="#how-the-prompts-work">Prompts</a>
 </p>
 
 ---
 
-## Features
+## What is this?
 
-- **40+ Premium Animations** — Scroll effects, SVG animations, text reveals, and interactive components
-- **AI Prompts Included** — Copy-paste prompts for Claude, GPT, or any AI assistant to recreate effects instantly
-- **Production Ready** — GPU-accelerated, 120fps performance, battle-tested in real projects
-- **SSR Safe** — Works perfectly with Next.js App Router, Pages Router, Remix, and Gatsby
-- **Fully Accessible** — Respects `prefers-reduced-motion`, semantic HTML, ARIA labels
-- **TypeScript Ready** — Full type definitions included
-- **Zero Dependencies** — Only requires React and Framer Motion
+Motion Lab is a single-page showcase of 19 Framer Motion effects running on React and Next.js. Every effect comes with a ready-to-use LLM prompt — copy it, paste it into Claude / ChatGPT / whatever you use, and get working code back, adapted to your project.
 
-## Demo
+No npm package to install. No abstractions to learn. Just scroll through, find something you like, grab the prompt, and go.
 
-**[Live Demo →](https://motion-lab.oronts.com)**
-
-Or run locally:
+## Get Started
 
 ```bash
 git clone https://github.com/oronts/motion-lab.git
@@ -57,123 +29,92 @@ npm install
 npm run dev
 ```
 
-## Installation
+Open `http://localhost:3000` and scroll.
 
-### Option 1: Clone Repository
+### Stack
 
-```bash
-git clone https://github.com/oronts/motion-lab.git
-cd motion-lab
-npm install
-```
+- **React 18** + **Framer Motion 11** for animations
+- **Next.js 14** with static export for hosting anywhere
+- Deploys to GitHub Pages out of the box
 
-### Requirements
+## Effects
 
-```json
-{
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "framer-motion": "^11.0.0"
-  }
-}
-```
+### SVG
 
-## Effects Catalog
+| # | Effect | What it does |
+|:-:|--------|--------------|
+| 01 | SVG Line Drawing | Strokes animate along the path as you scroll into view |
+| 02 | SVG Morphing | Shapes transition between triangle, square, pentagon, circle |
+| 03 | Animated Blob | Organic gradient blob that morphs and rotates |
+| 04 | Wave Animation | Three layered SVG waves scrolling at different speeds |
+| 05 | Pulse Rings | Concentric circles that expand and fade out |
 
-### SVG Animations
+### Text
 
-| # | Effect | Description |
-|:-:|--------|-------------|
-| 01 | **SVG Line Drawing** | Animated `pathLength` on scroll trigger |
-| 02 | **SVG Morphing** | Shape-to-shape transformation |
-| 03 | **Animated Blob** | Organic morphing gradient blob |
-| 04 | **Wave Animation** | Layered parallax waves |
-| 05 | **Pulse Rings** | Expanding circle ripples |
+| # | Effect | What it does |
+|:-:|--------|--------------|
+| 06 | Typewriter | Types, pauses, deletes, types the next phrase |
+| 07 | Text Scramble | Random characters resolve into the target word on hover |
+| 08 | Glitch Text | RGB channel split with staggered clip-path layers |
 
-### Text Effects
+### Scroll
 
-| # | Effect | Description |
-|:-:|--------|-------------|
-| 06 | **Typewriter** | Character-by-character typing |
-| 07 | **Text Scramble** | Decode effect on hover |
-| 08 | **Glitch Text** | RGB split glitch animation |
-
-### Scroll Effects
-
-| # | Effect | Description |
-|:-:|--------|-------------|
-| 09 | **Parallax Image** | Scroll-linked movement & scale |
-| 10 | **Hero Reveal** | Apple-style clip-path expansion |
-| 11 | **Horizontal Scroll** | Vertical scroll → horizontal movement |
-| 12 | **Slide Panels** | Directional panel reveals |
-| 13 | **Cinematic Text** | Word-by-word 3D reveal |
+| # | Effect | What it does |
+|:-:|--------|--------------|
+| 09 | Parallax | Image moves at a different rate than scroll |
+| 10 | Hero Reveal | Clip-path expands from a small rounded rect to fullscreen |
+| 11 | Horizontal Scroll | Vertical scrolling drives horizontal panel movement |
+| 12 | Slide Panels | Panels enter from different directions as you scroll |
+| 13 | Cinematic Text | Words flip up one by one with 3D perspective |
 
 ### Components
 
-| # | Effect | Description |
-|:-:|--------|-------------|
-| 14 | **Card Carousel** | Draggable with spring physics |
-| 15 | **Card Stack** | FLIP shuffle animation |
-| 16 | **Infinite Marquee** | Seamless auto-scroll loop |
-| 17 | **Counter Animation** | Number counting with easing |
-| 18 | **Staggered Grid** | Scroll-triggered entrance |
-| 19 | **Rotating 3D Text** | Per-character rotation |
+| # | Effect | What it does |
+|:-:|--------|--------------|
+| 14 | Card Carousel | Drag to navigate, spring physics on release |
+| 15 | Card Stack | Click to send the top card to the bottom (FLIP layout) |
+| 16 | Infinite Marquee | Auto-scrolling pill bar with faded edges |
+| 17 | Counter | Numbers count up with eased timing when scrolled into view |
+| 18 | Staggered Grid | Grid items pop in one after another on scroll |
+| 19 | Rotating 3D Text | Each character rotates on the X axis with a wave delay |
 
-### Utility Components
+Plus utility components: magnetic buttons, ambient particles, scroll progress bar, smooth scroll provider.
 
-| Component | Description |
-|-----------|-------------|
-| **Magnetic Button** | Cursor-following hover effect |
-| **Ambient Particles** | Floating background particles |
-| **Scroll Progress** | Fixed top progress bar |
-| **Smooth Scroll Provider** | Lenis-style smooth scrolling |
+## How the Prompts Work
 
-## AI Prompts
+Every effect on the page has a collapsible prompt box. Click **Copy**, open your LLM of choice, paste it in.
 
-Every effect includes a detailed AI prompt for instant reproduction. Click "📋 Copy" on any effect to get a prompt like this:
+The prompt gives the LLM the pattern (hooks, animation config, layout approach) so it can write a working version for your stack. You can add context like "use Tailwind" or "make it a Next.js server component wrapper" and the LLM will adapt.
 
 ```
-Create horizontal scroll on vertical scroll with Framer Motion:
-
-1. useScroll to track scroll progress
-2. useTransform to map Y scroll to X position
-3. Sticky container with overflow hidden
-4. Multiple panels at 100vw each
-
-const { scrollYProgress } = useScroll({
-  target: ref,
-  offset: ["start start", "end end"]
-});
-
-const x = useTransform(
-  scrollYProgress,
-  [0, 1],
-  ["5%", `-${(items.length - 1) * 100 + 5}%`]
-);
-
-<div ref={ref} style={{ height: `${items.length * 100}vh` }}>
-  <div style={{ position: 'sticky', top: 0, height: '100vh' }}>
-    <motion.div style={{ x, display: 'flex' }}>
-      {items.map(item => (
-        <div style={{ minWidth: '100vw' }}>{item}</div>
-      ))}
-    </motion.div>
-  </div>
-</div>
+Example workflow:
+1. Scroll through the demo, find "Horizontal Scroll"
+2. Click the Copy button on that section
+3. Paste into Claude or ChatGPT
+4. Add: "Use Tailwind CSS, make the panels show product cards from this array: [...]"
+5. Get back working code for your project
 ```
 
-### Using with AI Assistants
+That's it. No library to import, no API to learn.
 
-1. **Copy the prompt** from any effect
-2. **Paste into Claude, GPT, or your preferred AI**
-3. **Customize** with your specific requirements
-4. **Get working code** tailored to your project
+## Build & Deploy
 
-## Performance
+```bash
+npm run build    # Outputs static site to ./out
+npm run lint     # ESLint with next/core-web-vitals
+```
 
-- **GPU Acceleration** — Only animates `transform` and `opacity`
-- **Spring Physics** — Interruptible animations that feel natural
-- **Memoization** — All components wrapped in `memo()`
-- **Passive Listeners** — Non-blocking scroll handlers
-- **Will-Change** — Browser hints for optimization
+The included GitHub Actions workflow deploys to GitHub Pages on push to `main`. Works with any static host (Vercel, Netlify, Cloudflare Pages, S3, etc).
+
+## Performance Notes
+
+- Animations only use `transform` and `opacity` (GPU composited, no layout thrashing)
+- All components use `React.memo()` to skip unnecessary re-renders
+- Scroll listeners are passive
+- Respects `prefers-reduced-motion` — all motion disabled when the OS setting is on
+
+## License
+
+MIT — use it however you want.
+
+Built by [Oronts](https://oronts.com).
