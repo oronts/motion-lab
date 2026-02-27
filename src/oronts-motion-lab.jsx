@@ -992,33 +992,42 @@ HorizontalScroll.displayName = 'HorizontalScroll';
 // 13. SLIDE PANELS
 // ═══════════════════════════════════════════════════════════════════════════
 
+const SlidePanel = memo(({ panel, index, total, scrollYProgress }) => {
+  const start = index / total;
+  const end = start + 0.2;
+  const fromX = panel.from === 'left' ? '-100%' : panel.from === 'right' ? '100%' : '0%';
+  const fromY = panel.from === 'top' ? '-100%' : panel.from === 'bottom' ? '100%' : '0%';
+  const x = useTransform(scrollYProgress, [start, end], [fromX, '0%']);
+  const y = useTransform(scrollYProgress, [start, end], [fromY, '0%']);
+
+  return (
+    <motion.div style={{ x, y, position: 'absolute', inset: 0, background: panel.color, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: index }}>
+      <span style={{ fontSize: 'clamp(6rem, 20vw, 12rem)', fontWeight: 700, color: 'rgba(255,255,255,0.9)' }}>{panel.text}</span>
+    </motion.div>
+  );
+});
+
+SlidePanel.displayName = 'SlidePanel';
+
 const SlidePanels = memo(() => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  
+
   const panels = useMemo(() => [
     { color: COLORS.accent, text: '1', from: 'left' },
     { color: COLORS.pink, text: '2', from: 'right' },
     { color: COLORS.teal, text: '3', from: 'top' },
     { color: COLORS.blue, text: '4', from: 'bottom' },
   ], []);
-  
+
   return (
     <section>
       <SectionLabel number={12}>SLIDE PANELS</SectionLabel>
       <div ref={ref} style={{ height: '400vh' }}>
         <div style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden' }}>
-          {panels.map((panel, i) => {
-            const start = i / panels.length;
-            const end = start + 0.2;
-            const fromX = panel.from === 'left' ? '-100%' : panel.from === 'right' ? '100%' : '0%';
-            const fromY = panel.from === 'top' ? '-100%' : panel.from === 'bottom' ? '100%' : '0%';
-            return (
-              <motion.div key={i} style={{ x: useTransform(scrollYProgress, [start, end], [fromX, '0%']), y: useTransform(scrollYProgress, [start, end], [fromY, '0%']), position: 'absolute', inset: 0, background: panel.color, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: i }}>
-                <span style={{ fontSize: 'clamp(6rem, 20vw, 12rem)', fontWeight: 700, color: 'rgba(255,255,255,0.9)' }}>{panel.text}</span>
-              </motion.div>
-            );
-          })}
+          {panels.map((panel, i) => (
+            <SlidePanel key={i} panel={panel} index={i} total={panels.length} scrollYProgress={scrollYProgress} />
+          ))}
         </div>
       </div>
       
@@ -1574,7 +1583,7 @@ const DocsPanel = memo(({ onClose }) => {
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: COLORS.accent }}>🤖 All AI Prompts</h2>
           <MagneticButton onClick={onClose} variant="secondary" size="sm">Close</MagneticButton>
         </div>
-        <p style={{ opacity: 0.5, marginBottom: '1.5rem', fontSize: '0.9rem' }}>Each section has a detailed AI prompt. Scroll through the page and click "📋 Copy" on any effect!</p>
+        <p style={{ opacity: 0.5, marginBottom: '1.5rem', fontSize: '0.9rem' }}>Each section has a detailed AI prompt. Scroll through the page and click {'"'}📋 Copy{'"'} on any effect!</p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '0.75rem' }}>
           {effects.map((name, i) => (
             <div key={i} style={{ padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '10px', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.85rem' }}>
